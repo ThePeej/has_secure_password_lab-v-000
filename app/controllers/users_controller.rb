@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if user.valid? && user.password == user.password_confirmation
       user.save
       session[:user_id] = user.id
+      redirect_to controller: 'welcome', action: 'home'
     else
       redirect_to 'users#new'
     end
