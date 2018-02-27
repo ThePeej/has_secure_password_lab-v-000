@@ -1,4 +1,4 @@
-<%= form_for(@user), url: login_path, method: :post do |f| %>
+<%= form_for(@user), controller: 'users', action: 'create' do |f| %>
   <%= f.text_input :name %>
   <%= f.text_input :password %>
   <%= f.text_input :password_confirmation %>
