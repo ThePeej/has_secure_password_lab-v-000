@@ -12,6 +12,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
     else
       redirect_to 'users#new'
+    end
   end
 
   private
